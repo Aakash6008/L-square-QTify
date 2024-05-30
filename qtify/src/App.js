@@ -1,16 +1,18 @@
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero-section/Hero';
+import "./App.css";
+// import AlbumSongsPage from "./components/Album Songs Page/AlbumSongsPage";
+import HomePage from "./components/Home Page/HomePage";
+import { Route, Routes } from "react-router-dom";
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Navbar/>
-      <Hero/>
-    </div>
+    <>
+      <Routes>
+        {" "}
+        <Route path="/" Component={HomePage} />{" "}
+        {/* <Route path="/album/:title" Component={AlbumSongsPage} />{" "} */}
+      </Routes>{" "}
+    </>
   );
-}
+};
 
 export default App;
