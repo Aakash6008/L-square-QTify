@@ -32,12 +32,13 @@ const Search = ({ data, page }) => {
           onChange={handleInput}
         />
         <div>
-          <img
+            <img
             src={searchIcon}
             alt="Search Icon"
             onClick={handleSubmit}
             className={styles.searchIcon}
           />
+  
         </div>
       </div>
       <div className={styles.searchResultWrapper}>

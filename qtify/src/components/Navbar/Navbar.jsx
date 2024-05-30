@@ -1,11 +1,14 @@
-import Logo from "../Logo/Logo.jsx";
+import logoImg from "../../assets/logo.svg";
 import Search from "../Search/Search.jsx";
 import Button from "../Button/Button.jsx";
 import { useEffect, useState } from "react";
 import Feedback from "../Feedback/Feedback.jsx";
 import styles from "./navbar.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ data, page, songsData }) => {
+
+  let navigate = useNavigate();
   const [isFeedbackClicked, setIsFeedbackClicked] = useState(false);
 
   const handleClick = () => {
@@ -30,7 +33,13 @@ const Navbar = ({ data, page, songsData }) => {
         <Feedback onClose={() => setIsFeedbackClicked(false)} />
       )}
       <nav className={styles.nav}>
-        <Logo />
+      <img
+        src={logoImg}
+        alt="Logo"
+        className={styles.img}
+        onClick={() => navigate("/")}
+      />
+   
         <Search data={page === "home" ? data : songsData} page={page} />
         <Button
           text="GIVE FEEDBACK"
