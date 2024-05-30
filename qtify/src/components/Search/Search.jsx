@@ -25,8 +25,8 @@ const Search = ({ data, page }) => {
           type="search"
           placeholder={
             page === "home"
-              ? "Search an Album of Your Choice"
-              : "Search a Song of Your Choice"
+              ? "Search a Song of Your Choice"
+              : "Search an Album of Your Choice"
           }
           value={value}
           onChange={handleInput}
